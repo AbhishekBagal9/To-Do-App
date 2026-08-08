@@ -17,6 +17,20 @@ body{
     background: linear-gradient(135deg, #153677 ,#4e085f) ;
     padding: 10px;
 }
+.container img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
 .todo-app{
     max-width: 540px;
     background-color: #FFFFFF;
@@ -65,6 +79,15 @@ body{
     font-size: 16px;
 }
 
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#010714;
+    font-weight: 800;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
 ul li{
     list-style: none;
     font-size: 17px;
