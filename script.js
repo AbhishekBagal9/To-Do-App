@@ -62,16 +62,21 @@ input.addEventListener('keypress', function (e) {
 })
 
 listContainer.addEventListener('click', function (e) {
-    if (e.target.tagName === 'LI') {
-        e.target.classList.toggle('checked')
+    const li = e.target.closest('li')
+    const span = e.target.closest('span')
+    if (span && li && span.parentElement === li) {
+        const confirmDelete = confirm("Are you sure you want to delete this task ?")
+        if (confirmDelete) {
+            li.style.animation = 'slideIn 0.3s ease reverse'
+            setTimeout(() => {
+                li.remove()
+                showEmptyState()
+                updateCounter()
+            }, 250)
+        }
+    } else if (li && !span) {
+        li.classList.toggle('checked')
         updateCounter()
-    } else if (e.target.tagName === 'SPAN') {
-        e.target.parentElement.style.animation = 'slideIn 0.3s ease reverse'
-        setTimeout(() => {
-            e.target.parentElement.remove()
-            showEmptyState()
-            updateCounter()
-        }, 250)
     }
     savedata()
 })
