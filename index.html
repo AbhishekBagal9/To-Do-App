@@ -3,30 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Plan Your Day - To-Do List</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <div class="container">
        <div class="header">
-         <img src="Images/110403133.png"">
-         <h1>PLAN-YOUR-DAY</h1>
+          <img src="Images/110403133.png" alt="App Logo">
+          <h1>PLAN YOUR DAY</h1>
        </div>
         <div class="todo-app">
-            <h2>TO-DO-LIST <img src="Images\icon.png" alt=""></h2>
+            <h2>
+                <img src="Images\icon.png" alt="Task Icon">
+                To-Do List
+                <span class="task-counter" id="taskCounter">0 tasks</span>
+            </h2>
             <div class="row">
-                <input type="text" name="" id="" placeholder="Add Your Task">
+                <input type="text" id="taskInput" placeholder="Add a new task...">
                 <button>ADD TASK</button>
             </div>
-            <ul class="list-container" >
-<!--                 
-                <li class="checked">Task1</li>
-                <li>Task2</li>
-                <li>Task3</li> -->
+            <ul class="list-container" id="listContainer">
             </ul>
         </div>
-       
     </div>
     <script src="script.js"></script>
 </body>
